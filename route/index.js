@@ -8,6 +8,10 @@ module.exports = function(app){
    
     // front end
     app.get('/', function(req, res) {
+        res.send('coming soon!')
+    });
+
+    app.get('/app', function(req, res) {
         if(process.env.ENVIRONTMENT=='local')
         res.render('index', {locals: {script: '<script src="/public/js/live.js"></script>'}});
         else
