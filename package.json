@@ -9,6 +9,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "express": "~4.11.x",
     "kerberos": "~0.0.x",
     "parse": "~1.8.0",
@@ -19,5 +20,10 @@
   },
   "engines": {
     "node": ">=4.3"
+  },
+  "devDependencies": {
+    "laravel-mix": "^2.1.11",
+    "parse-dashboard": "^1.2.0",
+    "uikit": "^3.0.0-rc.9"
   }
 }
