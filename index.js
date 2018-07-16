@@ -5,6 +5,7 @@ var express = require('express');
 var ParseServer = require('parse-server').ParseServer;
 var path = require('path');
 var route = require('./route');
+var es6Renderer = require('express-es6-template-engine');
 require('dotenv').config()
 
 var databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
@@ -29,6 +30,10 @@ var api = new ParseServer({
 
 var app = express();
 
+// set template engine
+app.engine('html', es6Renderer);
+app.set('views', 'views');
+app.set('view engine', 'html');
 
 
 // Serve the Parse API on the /parse URL prefix

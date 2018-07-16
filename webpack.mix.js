@@ -1,5 +1,5 @@
 let mix = require('laravel-mix');
-
+// var LiveReloadPlugin = require('webpack-livereload-plugin');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,7 +11,12 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('frontend/js/app.js', 'public/js/');
+mix
+.js('frontend/js/app.js', 'public/js/')
+.setPublicPath('public');
+
+
+
 
 // Full API
 // mix.js(src, output);

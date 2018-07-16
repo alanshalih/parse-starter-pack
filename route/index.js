@@ -8,7 +8,10 @@ module.exports = function(app){
    
     // front end
     app.get('/', function(req, res) {
-        res.sendFile(path.join(__dirname, '../public/index.html'));
+        if(process.env.ENVIRONTMENT=='local')
+        res.render('index', {locals: {script: '<script src="/public/js/live.js"></script>'}});
+        else
+        res.render('index');
     });
 
     dashboard('/dashboard',app);
