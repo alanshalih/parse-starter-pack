@@ -14,5 +14,7 @@ module.exports = function(app){
         res.render('index');
     });
 
+    
+    if(process.env.ENVIRONTMENT=='local')
     dashboard('/dashboard',app);
 }

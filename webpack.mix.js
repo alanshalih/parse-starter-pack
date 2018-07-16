@@ -12,7 +12,7 @@ let mix = require('laravel-mix');
  */
 
 mix
-.js('frontend/js/app.js', 'public/js/')
+.js('src/js/app.js', 'public/js/')
 .setPublicPath('public');
 
 

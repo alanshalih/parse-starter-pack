@@ -1,13 +1,14 @@
 
 var ParseDashboard = require('parse-dashboard');
+require('dotenv').config()
 
 var dashboard = new ParseDashboard({
   "apps": [
     {
-      "serverURL": "http://localhost:1337/data",
-      "appId": "CekTransferAja",
-      "masterKey": "simplyEasyPaymentCheck",
-      "appName": "CekTransferID"
+      "serverURL": process.env.SERVER_URL,
+      "appId": process.env.APP_ID,
+      "masterKey": process.env.MASTER_KEY,
+      "appName": process.env.APP_NAME
     }
   ]
 });
